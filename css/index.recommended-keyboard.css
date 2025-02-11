@@ -1,8 +1,26 @@
 .recommended-keyboard {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  background-color:#fef8f3;
   font-family: "Nunito", sans-serif;
+  gap: 300px; /* Відступ між фото і текстом */
+  flex-direction: row-reverse;
 }
+
+.recommended-keyboard__image {
+  width: 908px;
+  height: 912px;
+  object-fit: cover;
+  flex-shrink: 0;
+  
+}
+
+.recommended-keyboard__content {
+  position: relative;
+  width: 50%;
+  white-space: nowrap; 
+}
+
 
 .recommended-keyboard__label {
   font-size: 12px;

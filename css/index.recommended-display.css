@@ -1,55 +1,80 @@
 .recommended-display {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
+  align-items: center;
+  background-color: #fef8f3;
   font-family: "Nunito", sans-serif;
+  gap: min(15vw, 300px); /* Змінний відступ */
 }
+
+.recommended-display__image {
+  width: 729px;
+  height: 672px;
+  object-fit: cover;
+  flex-shrink: 0;
+  
+}
+
+.recommended-display__content {
+  position: relative;
+  width: 50%;
+  white-space: nowrap; 
+}
+
+
 
 .recommended-display__label {
   font-size: 12px;
-  color: #ff7b16;
+  color: var(--orange-color);
   font-family: "Nunito", sans-serif;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .recommended-display__title {
   font-size: 52px;
+  margin-bottom: 20px;
   color: #272727;
+
 }
+
 
 .recommended-display__price {
   font-size: 33px;
-  color: #ff7b16;
+  color: var(--orange-color);
 }
 
 .recommended-display__divider {
-  width: 100%;
+  max-width: 70%; /* Залишає ширину лінії відповідно до ширини content */
   border: none;
   height: 1px;
   background-color: #00000012;
 }
 
+
+
 .recommended-display__description {
   font-size: 17px;
-  color: #6a6a6a;
+  color: var(--light-gray-color);
   margin-bottom: 20px;
 }
 
 .recommended-display__specs-title {
   font-size: 24px;
-  color: #1c4c97;
+  color: var( --blue-color);
+  margin-bottom: 20px;
 }
 
 .recommended-display__list {
   font-size: 17px;
-  color: #6a6a6a;
+  color:  var(--light-gray-color);
   margin-bottom: 40px;
 }
 
 .recommended-display__shop-btn {
-  background: #ff7f1f;
+  background:var(--orange-color);
   font-size: 15px;
   font-weight: 550;
-  color: #fff;
+  color: var( --white-color);
   padding: 12px 20px;
   border-radius: 8px;
   border: none;
@@ -58,6 +83,67 @@
 }
 
 .recommended-display__shop-btn:hover {
-  background: #000;
-  color: #fffbfb;
+  background:var(--dark-gray-color);
+  color: var( --white-color);
+}
+
+
+@media  (max-width: 600px) {
+  .recommended-display {
+    flex-direction: column; /* Перехід на вертикальне розташування елементів */
+    justify-content:space-around;
+    gap: 20px; /* Відступ між фото і текстом */
+  }
+
+  .recommended-display__image {
+    width: 600px; /* Ширина зображення на всю ширину контейнера */
+    height: 360px; /* Автоматична висота для збереження пропорцій */
+    
+  }
+
+  .recommended-display__content {
+    width: 100%; /* Ширина текстового блоку на всю ширину контейнера */
+    margin-left: 60px;
+
+  }
+
+  .recommended-display__label {
+    font-size: 12px; /* Зменшення шрифта */
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .recommended-display__title {
+    font-size: 24px; /* Зменшення розміру шрифта для заголовку */
+    margin-bottom: 20px;
+  }
+
+  .recommended-display__divider {
+    max-width: 100%; /* Лінія займає всю ширину */
+  }
+
+
+  .recommended-display__price {
+    font-size: 20px; /* Зменшення розміру шрифта для ціни */
+  }
+
+
+  .recommended-display__description {
+    font-size: 15px; /* Зменшення шрифта для опису */
+  }
+
+  .recommended-display__specs-title {
+    font-size: 20px; /* Зменшення розміру шрифта для заголовку характеристик */
+    margin-bottom: 20px;
+  }
+
+  .recommended-display__list {
+    font-size: 15px; /* Зменшення шрифта для списку */
+  }
+
+  .recommended-display__shop-btn {
+    padding: 10px 15px; /* Зменшення відступів кнопки */
+    font-size: 14px; /* Зменшення розміру шрифта для кнопки */
+    margin-bottom: 20px;
+  }
 }
