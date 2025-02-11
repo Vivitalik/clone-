@@ -1,0 +1,67 @@
+.sales {
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/index/sales-bunner.png");
+  background-size: cover; /* Фон покриває весь блок */
+  background-position: center; /* Центрує зображення */
+  background-repeat: no-repeat; /* Не повторює зображення */
+  background-attachment: fixed; /* Фіксує фон при прокручуванні */
+
+}
+
+.sales__title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 90px;
+  color: var(--white-color);
+  white-space: nowrap;
+}
+
+.sales__description {
+  font-family: "Nunito", sans-serif;
+  font-size: 19px;
+  color: #ffffff;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+.sales__shop-btn {
+  background: var(--orange-color);
+  font-size: 15px;
+  font-weight: 550;
+  color: var(--white-color);
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sales__shop-btn:hover {
+  background: var(--dark-gray-color);
+  color: var(--white-color);
+}
+
+@media screen and (max-width: 700px) {
+  .sales {
+    padding-top: 100px; /* Зменшуємо верхній відступ */
+    padding-bottom: 100px; /* Зменшуємо нижній відступ */
+  }
+
+  .sales__title {
+    font-size: 50px; /* Зменшуємо розмір шрифта для мобільних */
+  }
+
+  .sales__description {
+    font-size: 16px; /* Зменшуємо розмір шрифта */
+    margin-top: 20px;
+    margin-bottom: 40px; /* Зменшуємо відступи */
+  }
+
+  .sales__shop-btn {
+    font-size: 14px; /* Зменшуємо розмір шрифта на кнопці */
+    padding: 10px 15px; /* Зменшуємо відступи кнопки */
+    border-radius: 6px; /* Зменшуємо радіус кнопки */
+  }
+}
